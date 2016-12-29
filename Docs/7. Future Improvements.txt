@@ -1,0 +1,32 @@
+A lot of future improvements need to be introduced in the solution.
+Among them:
+
+- Optimizing user experience
+The user interfaces are implemented as proof-of-concept.
+I.e. current Book or Client selectors during borrowing adding work for ~10 items,
+but they will be of absolutely no use with hundreds/thousands of items.
+A more powerful UI control is required like jQuery AutoComplete.
+This will also require us to extend back-end with JSON data provider methods.
+Furthermore, it could be better to design per-Client sessions,
+so that the user will select the Client once for all the operations.
+Additionally, there are a lot of places requiring output customization:
+for instance, a borrowed Book should not have Edit/Borrow links shown.
+
+- Using REST API core
+It might be better to separate core services and Web server.
+A good solution might using RESTful Web services for the core methods.
+So we could implement different front-end apps for the users,
+that would use the same core API server instance
+(like Web application, mobile apps, desktop app).
+
+- Localizing UI
+Currently there's no UI localization implemented.
+All the UI strings including exception texts should have been moved
+to key-value resource collections grouped by different language.
+The user would need to have an opportunity to select preferred language
+or use an automatically location detected one.
+
+- Optimizing validation
+Current validation implementation makes no use of caching the data.
+This optimization is required to minimize database queries and improve system performance
+while working with large data amount.

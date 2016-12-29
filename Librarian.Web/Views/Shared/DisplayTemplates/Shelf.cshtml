@@ -1,0 +1,6 @@
+﻿@model Librarian.Core.Models.Shelf
+
+@if (Model != null)
+{
+    @Html.Raw($"{Model.Number} ({Model.Description})")
+}

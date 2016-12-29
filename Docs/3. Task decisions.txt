@@ -1,0 +1,53 @@
+The following task detail decisions were taken into consideration
+during the engineering and development process:
+
+- Things tend to change. So do the book Shelve configurations.
+Now the library uses 20-book Shelves, but no one knows what will they use in a couple years.
+So I decided to introduced a Shelf.Capacity integer field in advance.
+It is used both in the database and user interfaces, having the current default number of 20.
+The additional checks are used while positioning a Book, and editing a book Shelf with Books.
+
+- The Shelves must all have unique numbers, but may use the same description.
+The numbers are required for the administrators and users to be able to navigate efficiently.
+However, the descriptions may be the same - in case of one Shelve grows to a number of them.
+
+- Clients must have unique Names. A Client name is a simplified full name description all-at-once.
+
+- Books should have unique combinations of Name and Title.
+Imagine we live in a Singleton world, where all the books are printed only once.
+
+- Books should have unique combinations of Shelf and Position.
+One book fits a Shelf slot at one time.
+
+- If a book is borrowed by a client, then this book can't be borrowed by anyone else until returned.
+Since we have one copy of each Book, this seems correct.
+
+- The user may manually clear a Client's untrustworthy flag.
+Then the Client behaves as a trustworthy, until the next book overdue.
+
+- Book borrowing return dates are recorder into the system database.
+Currently this information is used for overdue analysis only.
+However, in the future we may add extra Book & Client statistics reports.
+
+- Overdue facts are also recorder in the Borrowing table.
+This helps to save the information even in case the Book duration limit changes later.
+
+- A Book can't be removed being borrowed by a client.
+So it is required to close the Borrowing before the removal.
+The system displays a corresponding error message in such a case.
+
+- A Client can't be removed while it has non-returned borrowed books.
+Otherwise the system displays a corresponding error message.
+
+- A Shelf can't be removed while any of its Books is borrowed.
+
+- When a Shelf is removed, all its non-borrowed Books are removed as well.
+
+- On Client editing, his age must not be altered lower
+than the currently borrowed books minimum age limit.
+
+- On Book editing, its duration limit can not be set lower
+than the current active borrowing duration length.
+
+- On Book editing, its age limit must not be changed lower
+than its current active borrowing Client age.

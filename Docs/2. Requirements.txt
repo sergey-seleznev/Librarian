@@ -1,0 +1,18 @@
+In order to run the solution, verify the following software configuration:
+
+   1) Windows 10 x64
+     (Windows 8/10 x86/x64 should also suit, but not tested)
+
+   2) Visual Studio 2015 Update 3 (any edition)
+      with Microsoft Web Developer Tools
+
+   3) .NET Core 1.0.3 SDK (1.0.0-preview2-003156)
+      x64: https://go.microsoft.com/fwlink/?LinkID=836281
+      x86: https://go.microsoft.com/fwlink/?LinkID=836287
+
+   4) Visual Studio 2015 .NET Core Tools
+      https://go.microsoft.com/fwlink/?LinkId=827546
+
+  *5) Please note: after NuGet package restore process completed
+      it's recommended to restart the IDE in order to correctly execute
+      the web host and the tests (IIS Express integration may fail otherwise).

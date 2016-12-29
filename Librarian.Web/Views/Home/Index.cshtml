@@ -1,0 +1,57 @@
+@model IEnumerable<Librarian.Core.Models.Borrowing>
+
+@{
+    ViewData["Title"] = "Borrowings";
+}
+
+<h2>Current borrowings</h2>
+
+<p>
+    <a asp-action="Borrow">Add new</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Book)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBorrowed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book.DurationLimit)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateBorrowed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book.DurationLimit)
+        </td>
+        <td>
+            <a asp-action="Close" asp-route-id="@item.Id">Close</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

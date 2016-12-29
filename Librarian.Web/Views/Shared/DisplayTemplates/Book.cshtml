@@ -1,0 +1,6 @@
+﻿@model Librarian.Core.Models.Book
+
+@if (Model != null)
+{
+    @Html.Raw($"{Model.Name} – {Model.Title}")
+}

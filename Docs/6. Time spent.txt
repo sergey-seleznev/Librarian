@@ -1,0 +1,17 @@
+Time spent on the project:
+
+- Task implementation:     9h
+  By the reason of hard time limit, the development was
+  started directly with the implementation, not the tests.
+
+- Unit-test development:   9h
+  A lot of time was spent for moving to FluentValidation engine.
+  This allowed better unit-testing using In-Memory data source.
+
+- Final verification:      2h
+
+- Documentation writing:   4h
+
+- Ubuntu publication:      2h
+
+  Total:                  26h

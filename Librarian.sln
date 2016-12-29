@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30E6D5A3-3766-4A0A-9E01-30616F0F8676}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Librarian.Core", "Librarian.Core\Librarian.Core.xproj", "{854597CD-5163-4011-A1CD-4E0A31B9FC5A}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Librarian.Web", "Librarian.Web\Librarian.Web.xproj", "{B8AA1990-DC60-463C-A0D0-915596A3FB2C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Librarian.Core.Tests", "Librarian.Core.Tests\Librarian.Core.Tests.xproj", "{903F19BE-B50A-4B4E-8AFE-6A74B77ADD23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{976D98D4-892B-4B7E-92C8-5295DA30197B}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\1. Projects.txt = Docs\1. Projects.txt
+		Docs\2. Requirements.txt = Docs\2. Requirements.txt
+		Docs\3. Task decisions.txt = Docs\3. Task decisions.txt
+		Docs\4. Technical decisions.txt = Docs\4. Technical decisions.txt
+		Docs\5. Configuration.txt = Docs\5. Configuration.txt
+		Docs\6. Time spent.txt = Docs\6. Time spent.txt
+		Docs\7. Future Improvements.txt = Docs\7. Future Improvements.txt
+		Docs\8. Tests.png = Docs\8. Tests.png
+		Docs\9. Ubuntu.png = Docs\9. Ubuntu.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854597CD-5163-4011-A1CD-4E0A31B9FC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{854597CD-5163-4011-A1CD-4E0A31B9FC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{854597CD-5163-4011-A1CD-4E0A31B9FC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{854597CD-5163-4011-A1CD-4E0A31B9FC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8AA1990-DC60-463C-A0D0-915596A3FB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8AA1990-DC60-463C-A0D0-915596A3FB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8AA1990-DC60-463C-A0D0-915596A3FB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8AA1990-DC60-463C-A0D0-915596A3FB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903F19BE-B50A-4B4E-8AFE-6A74B77ADD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903F19BE-B50A-4B4E-8AFE-6A74B77ADD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903F19BE-B50A-4B4E-8AFE-6A74B77ADD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903F19BE-B50A-4B4E-8AFE-6A74B77ADD23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

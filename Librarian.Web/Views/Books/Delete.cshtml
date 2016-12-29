@@ -1,0 +1,39 @@
+@model Librarian.Core.Models.Book
+
+@{
+    ViewData["Title"] = "Remove";
+}
+
+<h3>Are you sure you want to remove this book?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentifierCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdentifierCode)
+        </dd>
+    </dl>
+    
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Remove" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

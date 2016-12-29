@@ -1,0 +1,9 @@
+The solution allows its administrator to configure database storage
+by altering Librarian.Web/appsettings.json file.
+
+It has a ConnectionStrings/LibbrarianConnection JSON setting,
+that is used as the database connection string.
+
+By default LocalDB is used for easy debugging.
+In production it needs to be changed onto a more powerful engine instance
+(like MS SQL database).

@@ -1,0 +1,22 @@
+These are the technical decisions made while task implementation:
+
+- ASP.NET Core is used for allowing the application to be easily published and run cross-platform.
+
+- EntityFramework Core is used as an ORM engine to streamline and speed-up persistent data access.
+
+- LocalDB database engine is used for easy debugging without heavy database server installed.
+
+- Core features are extracted from the executable project to a class library.
+  This allows the Core to be referenced from both the UI (existing and future) and the Test projects.
+
+- Dependency Injection pattern is generally used for accessing basic services, like database context
+  and the data repository. With a good out-of-box ASP.NET Core support of DI, this helps to decrease
+  hard dependency and simplify providing service instances to their users.
+
+- FluentValidation engine is used to enable effective data validation.
+  This gives an opportunity to separate validation logic from both data models and the repository.
+  It has also a good ASP.NET Core integration with automatic frontend/backend validation.
+
+- The solution was additionally published onto an Ubuntu server.
+  This required some minor changes in DB configuration (Sqlite instead of LocalDB),
+  and project dependency specification. See the screenshot attached.

@@ -1,0 +1,6 @@
+.vs/
+bin/
+obj/
+**/wwwroot/lib/
+*.DotSettings.user
+project.lock.json
